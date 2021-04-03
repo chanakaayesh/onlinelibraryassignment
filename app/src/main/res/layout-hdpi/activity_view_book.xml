@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bluebackground"
+    tools:context=".book.View_book_list">
+    <android.widget.SearchView
+        android:id="@+id/searchView"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+    <RelativeLayout
+        android:layout_above="@+id/userprofile"
+        android:layout_below="@+id/searchView"
+        android:background="@drawable/transparent_background"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:weightSum="23"
+
+
+
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="21"
+                android:id="@+id/book_recycler"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+    <Button
+        android:text="View profile"
+        android:textColor="@color/white"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/button_background"
+        android:id="@+id/userprofile"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:onClick="UserProfileopen"
+        />
+
+</RelativeLayout>

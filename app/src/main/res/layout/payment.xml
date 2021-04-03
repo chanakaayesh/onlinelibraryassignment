@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/bluebackground"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/payid"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/transparent_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:background="@drawable/recycle_background"
+            android:id="@+id/paymentgroupRadio"
+            android:gravity="center_horizontal"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/paypal"
+
+
+                android:onClick="makepaymentmethode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <ImageView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/paypal"/>
+
+
+            <RadioButton
+
+
+                android:id="@+id/cardpayment"
+                android:onClick="makepaymentmethode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <ImageView
+                android:layout_marginLeft="4dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/creditcard"/>
+
+            <RadioButton
+                android:layout_marginRight="10dp"
+
+                android:id="@+id/skrill"
+                android:onClick="makepaymentmethode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <ImageView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/skrill"/>
+        </RadioGroup>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/paypal_board"
+            android:background="@drawable/recycle_background"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/paymentgroupRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:textColor="@color/white"
+                android:inputType="textEmailAddress"
+                android:id="@+id/paypal_username"
+                android:hint="Card holder's name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paypal_username"
+                android:id="@+id/paypal_password"
+                android:hint="password"
+                android:inputType="textPassword"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/debitcard_board"
+            android:background="@drawable/recycle_background"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/paymentgroupRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:textColor="@color/white"
+                android:inputType="textCapWords"
+                android:id="@+id/cardHolder_name"
+                android:hint="Card holder's name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardHolder_name"
+                android:id="@+id/card_cvv"
+                android:hint="CVV"
+                android:inputType="textPassword"
+                />
+            <EditText
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_cvv"
+                android:id="@+id/card_expiredate"
+                android:hint="dd/mm"
+                android:inputType="textPassword"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+
+            android:id="@+id/skrill_board"
+            android:background="@drawable/recycle_background"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/paymentgroupRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:textColor="@color/white"
+                android:inputType="textEmailAddress"
+                android:id="@+id/skrill_username"
+                android:hint="Card holder's name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/skrill_username"
+                android:id="@+id/skrill_password"
+                android:hint="password"
+                android:inputType="textPassword"
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <Button
+        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/payid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay"
+
+        android:layout_centerVertical="true"/>
+
+
+</RelativeLayout>

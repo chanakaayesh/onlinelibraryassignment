@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bluebackground"
+    android:orientation="vertical"
+    android:weightSum="20"
+    android:padding="15dp"
+    tools:context=".book.open_single_book">
+
+    <LinearLayout
+
+        android:layout_weight="14"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+
+        android:background="@drawable/transparent_background"
+        android:layout_width="match_parent"
+       >
+        <ImageView
+            android:layout_weight="9"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/single_book_image"
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"/>
+        <LinearLayout
+
+            android:id="@+id/id1"
+            android:layout_weight="1"
+            android:weightSum="6"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:textColor="@color/white"
+                android:autoSizeTextType="uniform"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Book Title"
+                />
+            <TextView
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/white"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/single_book_title"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:weightSum="6"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/id2"
+            android:layout_below="@id/id1"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:autoSizeTextType="uniform"
+
+                android:textColor="@color/white"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Description"
+                />
+            <TextView
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/white"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/single_book_description"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/id3"
+            android:layout_below="@id/id2"
+            android:weightSum="6"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/white"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Genre"
+                />
+            <TextView
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/white"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/single_book_genre"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/id4"
+            android:layout_below="@id/id3"
+            android:weightSum="6"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/white"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Price"
+                />
+            <TextView
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/white"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/single_book_price"
+                />
+        </LinearLayout>
+
+        <Button
+        android:id="@+id/borrow_done_button"
+      android:visibility="gone"
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/id4"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        />
+        <TextView
+            android:layout_below="@+id/borrow_done_button"
+            android:layout_centerHorizontal="true"
+           android:visibility="gone"
+            android:textSize="20dp"
+            android:id="@+id/borrowedAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"/>
+    <LinearLayout
+        android:id="@+id/payid"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:background="@drawable/bluebackground"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <RadioGroup
+
+            android:background="@drawable/transparent_background"
+            android:id="@+id/paymentgroupRadio"
+            android:gravity="center_horizontal"
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/paypal"
+
+
+              android:onClick="makepaymentmethode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <ImageView
+
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/paypal"/>
+
+
+            <RadioButton
+
+
+                android:id="@+id/cardpayment"
+                android:onClick="makepaymentmethode"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"/>
+            <ImageView
+                android:layout_marginLeft="4dp"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/creditcard"/>
+
+            <RadioButton
+                android:layout_marginRight="10dp"
+
+                android:id="@+id/skrill"
+                android:onClick="makepaymentmethode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <ImageView
+
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/skrill"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_weight="3"
+
+            android:background="@drawable/transparent_background"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:id="@+id/paypal_board"
+
+            android:layout_below="@+id/paymentgroupRadio"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="2"
+
+            >
+            <EditText
+                android:padding="2dp"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:inputType="textEmailAddress"
+                android:id="@+id/paypal_username"
+                android:hint="Email"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+            <EditText
+                android:padding="2dp"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/paypal_username"
+                android:id="@+id/paypal_password"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="3"
+            android:background="@drawable/transparent_background"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:id="@+id/debitcard_board"
+            android:weightSum="3"
+
+            android:layout_below="@+id/paymentgroupRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:padding="2dp"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:inputType="textCapWords"
+                android:id="@+id/cardHolder_name"
+                android:hint="Card holder's name"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            <EditText
+                android:padding="2dp"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/cardHolder_name"
+                android:id="@+id/card_cvv"
+                android:hint="CVV"
+                android:inputType="textPassword"
+                android:autoSizeTextType="uniform"
+                />
+            <EditText
+                android:padding="2dp"
+                android:textSize="15dp"
+                android:layout_weight="1"
+
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/card_cvv"
+                android:id="@+id/card_expiredate"
+                android:hint="dd/mm"
+                android:inputType="textPassword"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="3"
+            android:background="@drawable/transparent_background"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:id="@+id/skrill_board"
+
+
+            android:layout_below="@+id/paymentgroupRadio"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <EditText
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:inputType="textEmailAddress"
+                android:id="@+id/skrill_username"
+                android:hint="Card holder's name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+            <EditText
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/skrill_username"
+                android:id="@+id/skrill_password"
+                android:hint="password"
+                android:inputType="textPassword"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"/>
+    <Button
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:id="@+id/borrwed"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/button_background"
+        android:onClick="borrow_book"
+        android:text="Borrow Book"
+        />
+
+</LinearLayout>
