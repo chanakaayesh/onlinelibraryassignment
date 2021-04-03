@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -70,6 +71,7 @@ public class open_single_book extends AppCompatActivity {
               setTitle("Borrow Book");
               titles  =(TextView)findViewById(R.id.single_book_title);
               descriptions  =(TextView)findViewById(R.id.single_book_description);
+              descriptions.setMovementMethod(new ScrollingMovementMethod());
               genres  =(TextView)findViewById(R.id.single_book_genre);
               prices  =(TextView)findViewById(R.id.single_book_price);
               borrowed_done= (TextView)findViewById(R.id.borrowedAlert);
